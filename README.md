@@ -3,13 +3,13 @@
 ## Create network
 
 ```
-# docker network create mynetwork
+# docker network create myapp
 ```
 
 ## Creating container for caching using redis image
 
 ```
-# docker container run --name redis -d --network mynetwork --restart always redis:latest
+# docker container run --name cache -d --network myapp --restart always redis:latest
 
 ```
 
