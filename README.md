@@ -20,9 +20,11 @@ Here I am creating 3 containers with the same application to get the geoIP locat
 Your IPSTACK_KEY is your unique authentication key used to gain access to the ipstack API, https://ipstack.com/. 
 
 ```
-# docker container run --name flask01 -d --network mynetwork --restart always -p 8081:8080  -e CACHING_SERVER=redis -e IPSTACK_KEY="IPSTACK_ACCESS_KEY"  jebincvarghese/ipstack:v1
-# docker container run --name flask02 -d --network mynetwork --restart always -p 8082:8080  -e CACHING_SERVER=redis -e IPSTACK_KEY="IPSTACK_ACCESS_KEY"  jebincvarghese/ipstack:v1
-# docker container run --name flask03 -d --network mynetwork --restart always -p 8083:8080  -e CACHING_SERVER=redis -e IPSTACK_KEY="IPSTACK_ACCESS_KEY"  jebincvarghese/ipstack:v1
+#docker container run -d --name ipstackapp1 --network myapp --restart always -p 8081:8080 -e CACHING_SERVER=cache -e IPSTACK_KEY=a0fb9d2cff312331bab08baf8486502c jebincvarghese/ipstack:v1
+   
+#docker container run -d --name ipstackapp2 --network myapp --restart always -p 8082:8080 -e CACHING_SERVER=cache -e IPSTACK_KEY=a0fb9d2cff312331bab08baf8486502c jebincvarghese/ipstack:v1
+
+#docker container run -d --name ipstackapp3 --network myapp --restart always -p 8083:8080 -e CACHING_SERVER=cache -e IPSTACK_KEY=a0fb9d2cff312331bab08baf8486502c jebincvarghese/ipstack:v1
 
 ```
 
