@@ -32,15 +32,9 @@ Now your applicaton will be availble on IPv4 Public IP:8081, IPv4 Public IP:8082
 
 ## Load balancing containers with ALB
 
-Create a target group and register the targets as shown below,
-
-I am registering the same instance as different targets on port 8081, 8082 and 8083.
-
-
-Create ALB using this target group
-
-
-Instead of setting up a container for caching (Redis) you can use ``ElastiCache``, then replace ``CACHING_SERVER=redis`` with ElastiCache primary end point.
+- Create a target group and register the targets.
+- I am registering the same instance as different targets on port 8081, 8082 and 8083.
+- Create ALB using this target group
 
 
 
